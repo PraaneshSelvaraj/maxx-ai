@@ -1,0 +1,6 @@
+langchain==0.1.9
+langchain-groq==0.0.1
+SpeechRecognition==3.8.1
+PySide2==5.15.2.1
+PyAudio==0.2.14
+keyboard==0.13.5
