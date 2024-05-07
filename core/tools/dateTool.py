@@ -7,9 +7,8 @@ class DateInput(BaseModel):
     date_format: str = Field(description='used to specify the date format', default='%Y-%m-%d, %A')
 
 class DateTool(BaseTool):
-    name = "Get Current Date"
+    name = "DateTool"
     description = "use only when the human wants to know the current date."
-    # description = "Useful when you need to get the current date."
     description += " args: {'date_format': {'required':True, 'description': 'used to specify the date format', 'default': '%Y-%m-%d, %A', 'type': 'string'},}"
     args_schema: Type[BaseModel] = DateInput
 

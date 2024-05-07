@@ -14,6 +14,7 @@ def awake():
     text = stt.synthesize()
 
     if text:
+        print(text)
         sounds.play_process_sound()
         resp = brain.invoke(text)
         tts.speak(resp)

@@ -7,9 +7,8 @@ class TimeInput(BaseModel):
     time_format : str = Field(description='used to specify the time format', default='%I:%M %p')
 
 class TimeTool(BaseTool):
-    name = "Get Current Time"
+    name = "TimeTool"
     description = "use only when the human wants to know the current time."
-    # description = "Useful for when you need to get the current time."
     description += " args: {'time_format': {'required':True, 'description': 'used to specify the time format.', 'default': '%I:%M %p', 'type': 'string'},}"
     args_schema: Type[BaseModel] = TimeInput
 

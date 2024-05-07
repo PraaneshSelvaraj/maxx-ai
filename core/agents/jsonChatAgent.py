@@ -6,7 +6,11 @@ class JsonChatAgent:
         self.llm = llm
         self.tools = tools
         self.prompt = prompt
-        self.memory = []
+        self.memory = [
+            HumanMessage(content='Hello There'),
+            AIMessage(content='Hi, I am maxx. How can I help you today?')
+        ]
+        
 
         self.agent_executor = AgentExecutor(
             agent=create_json_chat_agent(self.llm, self.tools, self.prompt),
