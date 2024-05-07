@@ -11,11 +11,9 @@ class JsonChatAgent:
             AIMessage(content='Hi, I am maxx. How can I help you today?')
         ]
         
-
         self.agent_executor = AgentExecutor(
             agent=create_json_chat_agent(self.llm, self.tools, self.prompt),
             tools=self.tools,
-            verbose=True,
             handle_parsing_errors=True,
         )
 

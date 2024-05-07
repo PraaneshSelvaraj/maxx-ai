@@ -10,7 +10,8 @@ Before running Maxx-AI, ensure you have the following:
 - Environment variables set for the following API keys:
     - `groq_api_key`: Your Groq API key
     - `deepgram_api_key`: Your Deepgram API key
-    - `wit_ai_key`: Your Wit.ai API key
+    - `wit_ai_key`: Your Wit.ai API key, if using witai instead of deepgram
+    - `owm_api_key`: Your OpenWeatherMap API key
 
 ## Installation
 You can easily install Maxx-AI by following these steps:
