@@ -15,12 +15,11 @@ class WebsiteOpenerTool(BaseTool):
     args_schema: Type[BaseModel] = UrlInput    
 
     def _run(self, url : str, **kwargs) -> str:
-        print(tool_temp.opened_urls_website_opener)
         if url in tool_temp.opened_urls_website_opener:
-            return {'success': False, 'message': f"The URL '{url}' has already been opened. give final answer"}
+            return {'success': False, 'message': f"The URL '{url}' has already been opened."}
+        
         webbrowser.open(url)
         tool_temp.opened_urls_website_opener.append(url)
-        print(tool_temp.opened_urls_website_opener)
         data = {'success' : True}
         return data
     
