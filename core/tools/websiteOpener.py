@@ -20,7 +20,8 @@ class WebsiteOpenerTool(BaseTool):
         
         webbrowser.open(url)
         tool_temp.opened_urls_website_opener.append(url)
-        data = {'success' : True}
+        data = {'success' : True, 'message':f"The URL {url} has been opened successfully."}
+        tool_temp.tools_used.append({"tool": "WebsiteOpenerTool", "resp" : data})
         return data
     
     def _arun(self, url: str, **kwargs):

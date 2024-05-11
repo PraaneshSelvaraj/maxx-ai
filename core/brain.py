@@ -1,6 +1,6 @@
 from core import agents
 from core.llms import groqLLM, ollama
-from core.tools import get_tools, reset_all_tools
+from core.tools import get_tools
 from core.prompts import structured_chat_prompt, simple_chat_prompt
 from core.chat import SimpleChat
 from langchain.memory import ConversationBufferMemory
@@ -21,7 +21,6 @@ class Brain:
 
     def invoke(self, query : str) -> str:
         if self.agentMode:
-            reset_all_tools()
             return self.agent.invoke(query)
         else:
             return self.simpleChat.invoke(query)
