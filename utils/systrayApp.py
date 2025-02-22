@@ -1,4 +1,4 @@
-from PySide2 import QtWidgets, QtGui
+from PySide6 import QtWidgets, QtGui
 import sys
 
 class SystemTrayApp(QtWidgets.QSystemTrayIcon):
@@ -20,7 +20,7 @@ class SystemTrayApp(QtWidgets.QSystemTrayIcon):
         self.activated.connect(self.on_tray_icon_activated)
 
     def on_tray_icon_activated(self, reason):
-        if reason == self.Trigger:
+        if reason == QtWidgets.QSystemTrayIcon.Trigger:
             self.awake()
 
 class SystemTrayRunner():

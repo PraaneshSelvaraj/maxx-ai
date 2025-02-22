@@ -4,6 +4,9 @@ from .dateTool import DateTool
 from .openWeatherMapTool import OpenWeatherMapTool
 from .websiteOpener import WebsiteOpenerTool
 from .youtubeSearchTool import YoutubeSearchTool
+from .screenshotTool import ScreenshotTool
+from .spotifySearchTool import SpotifySearchTool
+from .spotifyPlayTool import SpotifyPlayTool
 
 def get_tools():
     return [
@@ -12,6 +15,9 @@ def get_tools():
             OpenWeatherMapTool(),
             WebsiteOpenerTool(),
             YoutubeSearchTool(),
+            ScreenshotTool(),
+            SpotifySearchTool(),
+            SpotifyPlayTool(),
         ]
 
 def reset_all_tools():
